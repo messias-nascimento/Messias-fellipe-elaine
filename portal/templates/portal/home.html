@@ -1,0 +1,401 @@
+<!--José Messias_ Maria Elaine_ATV06_523-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Página Amigável</title>
+
+    <link rel="icon" type="image/x-icon" href="img/baixados.jpeg">
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/curriculo.css">
+    <link rel="stylesheet" href="css/tema_livre1.css">
+
+    <style>
+        /* Estilos do currículo e do tema livre do Luiz */
+        .curriculo-luiz {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .curriculo-luiz .perfil {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .pizza-luiz {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .pizza-luiz .fotos {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body id="corpo">
+
+    <noscript>
+        Olá! Parece que o JavaScript está desativado no seu navegador.
+        Algumas funcionalidades deste site podem não funcionar corretamente.
+    </noscript>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1 class="title2">PÁGINA AMIGÁVEL</h1>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <h1 class="title2">MENU:</h1>
+
+        <a href="#" class="link" onclick="mostrar('home'); return false;">
+            INÍCIO
+        </a>
+        <br>
+
+        <a href="#" class="link" onclick="mostrar('curriculo_messias'); return false;">
+            CURRÍCULO MESSIAS
+        </a>
+        <br>
+
+        <a href="#" class="link" onclick="mostrar('curriculo_elaine'); return false;">
+            CURRÍCULO ELAINE
+        </a>
+        <br>
+
+        <a href="#" class="link" onclick="mostrar('tema_livre_messias'); return false;">
+            TEMA LIVRE MESSIAS
+        </a>
+        <br>
+
+        <a href="#" class="link" onclick="mostrar('tema_livre_elaine'); return false;">
+            TEMA LIVRE ELAINE
+        </a>
+        <br>
+
+        <a href="#" class="link" onclick="mostrar('curriculo_luiz'); return false;">
+            CURRÍCULO FELLIPE
+        </a>
+        <br>
+
+        <a href="#" class="link" onclick="mostrar('tema_livre_luiz'); return false;">
+            TEMA LIVRE FELLIPE
+        </a>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="tabela">
+
+        <!-- Página inicial -->
+        <section id="home" class="pagina">
+
+            <h2>BEM-VINDO(A)!</h2>
+
+            <p>
+                À nossa página web!
+                <br>
+                Explore nossos conteúdos na aba menu!
+            </p>
+
+            <img
+                src="img/gato.gif"
+                alt="Gato"
+                title="Tudo joia, meu patrão"
+                class="imagem"
+            >
+
+        </section>
+
+        <!-- Currículo do José Messias -->
+        <section id="curriculo_messias" class="pagina" style="display: none;">
+
+            <img
+                src="img/foto.jpeg"
+                alt="Foto de José Messias"
+                title="Foto de perfil"
+                class="perfil"
+            >
+
+            <h1 class="title">José Messias</h1>
+
+            <h2 class="title">HABILIDADES E COMPETÊNCIAS</h2>
+
+            <ul>
+                <li><p class="parag1">Comprometimento</p></li>
+                <li><p class="parag1">Organização</p></li>
+                <li><p class="parag1">Proatividade</p></li>
+                <li><p class="parag1">Trabalha bem em equipe</p></li>
+            </ul>
+
+            <h2 class="title">RESUMO GERAL</h2>
+
+            <p class="parag1">
+                Profissional de TI versátil, com conhecimentos em suporte
+                técnico, manutenção de equipamentos e desenvolvimento básico
+                de aplicações. Possui capacidade de adaptação a diferentes
+                ambientes tecnológicos, rápido aprendizado e foco em
+                resultados. Conhecimentos em GitHub Desktop e Visual Studio Code.
+            </p>
+
+            <h2 class="title">FORMAÇÃO</h2>
+
+            <p class="parag1">
+                Técnico em Informática pelo Instituto Federal de Alagoas.
+            </p>
+
+            <h2 class="title">CONTATO</h2>
+
+            <ul>
+                <li>(82) 99914-3997</li>
+                <li>jmns4@aluno.ifal.edu.br</li>
+            </ul>
+
+        </section>
+
+        <!-- Currículo da Maria Elaine -->
+        <section id="curriculo_elaine" class="pagina" style="display: none;">
+
+            <img
+                src="img/elaine.PNG"
+                alt="Foto de Maria Elaine"
+                title="Foto de perfil"
+                class="perfil"
+            >
+
+            <h1 class="title">Maria Elaine</h1>
+
+            <h2 class="title">HABILIDADES E COMPETÊNCIAS</h2>
+
+            <ul>
+                <li><p class="parag">Comprometimento</p></li>
+                <li><p class="parag">Organização</p></li>
+                <li><p class="parag">Proatividade</p></li>
+                <li><p class="parag">Trabalha bem em equipe</p></li>
+            </ul>
+
+            <h2 class="title">RESUMO GERAL</h2>
+
+            <p class="parag">
+                Estudante do ensino médio e da área de TI, proativa e
+                organizada, com facilidade de aprendizado e adaptação.
+                Busca crescer profissionalmente, é responsável e possui
+                bom relacionamento interpessoal.
+            </p>
+
+            <h2 class="title">FORMAÇÃO</h2>
+
+            <p class="parag">
+                Técnica em Informática pelo Instituto Federal de Alagoas.
+            </p>
+
+            <h2 class="title">CONTATO</h2>
+
+            <ul>
+                <li>(82) 98835-8434</li>
+                <li>mess47@aluno.ifal.edu.br</li>
+            </ul>
+
+        </section>
+
+        <!-- Tema livre do José Messias: Minecraft -->
+        <section id="tema_livre_messias" class="pagina" style="display: none;">
+
+            <h1 class="titulo">O QUE É MINECRAFT?</h1>
+
+            <p class="parag2">
+                Minecraft é um jogo eletrônico sandbox de sobrevivência,
+                lançado oficialmente em 2011 e desenvolvido pela Mojang Studios.
+                Foi originalmente criado pelo desenvolvedor sueco
+                Markus "Notch" Persson.
+            </p>
+
+            <img
+                class="fotos"
+                src="img/notch.jpeg"
+                alt="Imagem de Markus Persson"
+                title="Criador de Minecraft"
+            >
+
+            <p class="parag2">
+                A primeira versão alfa pública foi lançada em 17 de maio de
+                2009. O jogo recebeu sua versão completa em 18 de novembro
+                de 2011 e, posteriormente, passou a ser disponibilizado
+                em diversas plataformas, incluindo computadores, celulares
+                e consoles. Em 2014, a Microsoft adquiriu a Mojang.
+            </p>
+
+            <img
+                class="fotos"
+                src="img/mine.jpg"
+                alt="Imagem de Minecraft"
+                title="Minecraft"
+            >
+
+            <p>
+                <a
+                    href="https://www.minecraft.net/pt-br/about-minecraft"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    CLIQUE AQUI PARA SABER MAIS SOBRE MINECRAFT
+                </a>
+            </p>
+
+        </section>
+
+        <!-- Tema livre da Maria Elaine: Henrique e Juliano -->
+        <section id="tema_livre_elaine" class="pagina" style="display: none;">
+
+            <h1 class="titulo">QUEM SÃO HENRIQUE E JULIANO?</h1>
+
+            <p class="parag2">
+                Henrique e Juliano são uma dupla de grande sucesso
+                da música sertaneja brasileira. Formada pelos irmãos
+                Ricelly Henrique Tavares Reis e Edson Alves dos Reis
+                Junior, conhecido como Juliano, a dupla é conhecida
+                por sucessos como "Até Você Voltar", "Cuida Bem Dela"
+                e "Flor e o Beija-Flor".
+            </p>
+
+            <img
+                class="fotos"
+                src="img/juliano.jpg"
+                alt="Henrique e Juliano"
+                title="Henrique e Juliano"
+            >
+
+            <p class="parag2">
+                Nascidos em Palmeirópolis, no Tocantins, os irmãos
+                começaram a cantar juntos inspirados pela música
+                sertaneja. O apoio da família foi importante para
+                que eles continuassem buscando o sonho de viver da música.
+            </p>
+
+            <img
+                class="fotos"
+                src="img/hej.jpg"
+                alt="Imagem da dupla Henrique e Juliano"
+                title="Henrique e Juliano"
+            >
+
+            <p>
+                <a
+                    href="https://pt.wikipedia.org/wiki/Henrique_%26_Juliano"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    CLIQUE AQUI PARA SABER MAIS SOBRE HENRIQUE E JULIANO
+                </a>
+            </p>
+
+        </section>
+
+        <!-- currículo: Fellipe Dutra -->
+        <section id="curriculo_luiz" class="pagina curriculo-luiz"
+            style="display: none;">
+
+            <img
+                src="img - Copia/curriculo.jpg"
+                alt="Foto de Fellipe"
+                title="Foto de perfil"
+                class="perfil"
+            >
+
+            <h1 class="title">Luiz Fellipe Teixeira Dutra</h1>
+
+            <h2 class="title">PERFIL PROFISSIONAL</h2>
+
+            <p>
+                Técnico integrado ao ensino médio em Informática.
+            </p>
+
+            <h2 class="title">NÍVEL DE FORMAÇÃO</h2>
+
+            <p>Médio/Técnico</p>
+
+            <h2 class="title">HABILIDADES</h2>
+
+            <ul style="display: inline-block; text-align: left;">
+                <li>Trabalho em equipe</li>
+                <li>Interpretação de projetos</li>
+                <li>Cálculos</li>
+            </ul>
+
+            <h2 class="title">INTERESSES</h2>
+
+            <ul style="display: inline-block; text-align: left;">
+                <li>Tecnologia</li>
+                <li>Ciências exatas</li>
+            </ul>
+
+            <h2 class="title">IDIOMAS</h2>
+
+            <ul style="display: inline-block; text-align: left;">
+                <li>Português nativo</li>
+                <li>Inglês intermediário</li>
+            </ul>
+
+        </section>
+
+        <!-- tema livre: Pizza -->
+        <section id="tema_livre_luiz" class="pagina pizza-luiz"
+            style="display: none;">
+
+            <h1 class="titulo">HISTÓRIA DA PIZZA</h1>
+
+            <img
+                class="fotos"
+                src="img - Copia/pizza.png"
+                alt="Foto de uma pizza"
+                title="Pizza"
+            >
+
+            <p class="parag2">
+                A história da pizza começou aproximadamente no século VI a.C.,
+                quando povos do Mediterrâneo inventaram a receita de uma
+                espécie de pão árabe com massa plana em formato de disco.
+                O alimento tinha como ingredientes água e farinha de trigo.
+            </p>
+
+            <h2 class="titulo">MEU SABOR FAVORITO</h2>
+
+            <p class="parag2">
+                O melhor sabor de pizza, na minha opinião, é
+                <strong>calabresa!</strong>
+            </p>
+
+            <p>
+                <a
+                    href="https://brasilescola.uol.com.br/curiosidades/historia-da-pizza.htm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    CLIQUE AQUI PARA SABER MAIS SOBRE A HISTÓRIA DA PIZZA
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="rodape" class="tabela">
+
+        <p>
+            © 2026 - Todos os direitos reservados
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
