@@ -14,14 +14,13 @@
     <link rel="stylesheet" href="{% static 'portal/css/curriculo.css' %}">
 </head>
 
-<body id="corpo">
+<body class="corpo">
 
 <header class="cabecalho">
     <h1 class="title2">PÁGINA AMIGÁVEL</h1>
 </header>
 
-<div class="linha_principal">
-<div class="menu">
+<nav>
 
     <h1 class="title2">MENU:</h1>
 
@@ -51,19 +50,19 @@
 
     {% endfor %}
 
-</div>
-
+</nav>
 <div class="conteudo" id="{{ conteudo.slug }}">
 
     {{ conteudo.conteudo_html|safe }}
 
 </div>
+
 </div>
-<div class="rodape">
+<footer>
 
     <p>© 2026 - Todos os direitos reservados</p>
 
-</div>
+</footer>
 
 </body>
 
