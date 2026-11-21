@@ -1,0 +1,32 @@
+/*José Messias_Maria Elaine_ATV06_523*/
+
+#curriculo_messias,#curriculo_felipe,#curriculo_elaine{
+    min-height: 100vh;
+    padding-left: 15%;/*espaço no lado esquerdo entre o conteudo e a página*/
+    padding-right: 15%;/*espaço no lado direito entre o conteudo e a página*/
+    background-color: azure;/*cor de fundo da página*/
+}
+    
+.parag1 {
+    font-style: italic;/*define fonte*/
+    font-size: larger;/*define tamanho da fonte*/
+    text-align: justify;/*justifica o texto*/
+}
+.title {
+    font-size: 25px; /*ajusta o tamanho da fonte*/
+    font-weight: bold;/*deixa o texto em negrito*/
+}
+.perfil{
+    max-width:150px;/*define o tamanho máximo da foto de perfil*/
+    width:100%;/*deixa a foto de perfil em 100% do tamanho definido acima*/
+    height:auto;/*deixa a altura da foto de acordo com a largura*/
+    border-radius:50%;/*faz com que a foto fique arredondada*/
+}
+
+@media (max-width:768px){
+
+    #curriculo_messias, #curriculo_elaine, #curriculo_felipe{
+        padding-left:5%;/*usado para que quando a tela for menor do que 768px o espaço a esuquerda diminua para 5%*/
+        padding-right:5%;/*usado para que quando a tela for menor do que 768px o espaço a direita diminua para 5%*/
+    }
+}

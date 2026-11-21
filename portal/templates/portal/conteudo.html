@@ -10,29 +10,38 @@
     <title>{{ conteudo.titulo }}</title>
 
     <link rel="stylesheet" href="{% static 'portal/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/tema_livre1.css' %}">
+    <link rel="stylesheet" href="{% static 'portal/css/curriculo.css' %}">
 </head>
 
-<body>
+<body id="corpo">
 
-<header>
-    <h1>PÁGINA AMIGÁVEL</h1>
+<header class="cabecalho">
+    <h1 class="title2">PÁGINA AMIGÁVEL</h1>
 </header>
 
-<nav>
+<div class="linha_principal">
+<div class="menu">
 
-    <h2>MENU:</h2>
+    <h1 class="title2">MENU:</h1>
 
     {% for menu in menus %}
 
-        {% if menu.tipo_destino == 'interno' %}
+        {% if menu.tipo_destino == 'home' %}
 
-            <a href="{% url 'pagina_conteudo' menu.conteudo.slug %}">
+            <a href="{% url 'home' %}" class="link">
                 {{ menu.titulo }}
             </a>
 
-        {% else %}
+        {% elif menu.tipo_destino == 'interno' %}
 
-            <a href="{{ menu.url_externa }}" target="_blank">
+            <a href="{% url 'pagina_conteudo' menu.conteudo.slug %}" class="link">
+                {{ menu.titulo }}
+            </a>
+
+        {% elif menu.tipo_destino == 'externo' %}
+
+            <a href="{{ menu.url_externa }}" class="link" target="_blank">
                 {{ menu.titulo }}
             </a>
 
@@ -42,19 +51,19 @@
 
     {% endfor %}
 
-</nav>
+</div>
 
-<main>
+<div class="conteudo" id="{{ conteudo.slug }}">
 
     {{ conteudo.conteudo_html|safe }}
 
-</main>
-
-<footer>
+</div>
+</div>
+<div class="rodape">
 
     <p>© 2026 - Todos os direitos reservados</p>
 
-</footer>
+</div>
 
 </body>
 

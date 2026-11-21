@@ -1,3 +1,4 @@
+{% load static %}
 <!--José Messias_ Maria Elaine_ATV06_523-->
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,37 +9,9 @@
 
     <title>Página Amigável</title>
 
-    <link rel="icon" type="image/x-icon" href="img/baixados.jpeg">
+    <link rel="icon" type="image/x-icon" href="{% static 'portal/img/baixados.jpeg'%}">
 
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/curriculo.css">
-    <link rel="stylesheet" href="css/tema_livre1.css">
-
-    <style>
-        /* Estilos do currículo e do tema livre do Luiz */
-        .curriculo-luiz {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .curriculo-luiz .perfil {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .pizza-luiz {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .pizza-luiz .fotos {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-    </style>
-
+    <link rel="stylesheet" href="{% static 'portal/css/home.css'%}">
 </head>
 
 <body id="corpo">
@@ -54,51 +27,43 @@
     </header>
 
     <!-- Menu de navegação -->
-    <nav>
-        <h1 class="title2">MENU:</h1>
+    <div class="menu">
+    <h1 class="title2">MENU:</h1>
 
-        <a href="#" class="link" onclick="mostrar('home'); return false;">
-            INÍCIO
-        </a>
+    {% for menu in menus %}
+
+        {% if menu.tipo_destino == 'home' %}
+
+            <a href="/?teste=1" class="link">
+                {{ menu.titulo }}
+            </a>
+
+        {% elif menu.tipo_destino == 'interno' %}
+
+            <a href="{% url 'pagina_conteudo' menu.conteudo.slug %}" class="link">
+                {{ menu.titulo }}
+            </a>
+
+        {% else %}
+
+            <a href="{{ menu.url_externa }}" class="link" target="_blank">
+                {{ menu.titulo }}
+            </a>
+        {% endif %}
+
         <br>
 
-        <a href="#" class="link" onclick="mostrar('curriculo_messias'); return false;">
-            CURRÍCULO MESSIAS
-        </a>
-        <br>
+    {% endfor %}
 
-        <a href="#" class="link" onclick="mostrar('curriculo_elaine'); return false;">
-            CURRÍCULO ELAINE
-        </a>
-        <br>
-
-        <a href="#" class="link" onclick="mostrar('tema_livre_messias'); return false;">
-            TEMA LIVRE MESSIAS
-        </a>
-        <br>
-
-        <a href="#" class="link" onclick="mostrar('tema_livre_elaine'); return false;">
-            TEMA LIVRE ELAINE
-        </a>
-        <br>
-
-        <a href="#" class="link" onclick="mostrar('curriculo_luiz'); return false;">
-            CURRÍCULO FELLIPE
-        </a>
-        <br>
-
-        <a href="#" class="link" onclick="mostrar('tema_livre_luiz'); return false;">
-            TEMA LIVRE FELLIPE
-        </a>
-        <br> 
+</div>
 
     <!-- Conteúdo principal -->
-    <main class="tabela">
+    <div class="tabela">
 
         <!-- Página inicial -->
-        <section id="home" class="pagina">
+        <div id="home" class="conteudo">
 
-            <h2>BEM-VINDO(A)!</h2>
+            <h2 class="title2">BEM-VINDO(A)!</h2>
 
             <p>
                 À nossa página web!
@@ -107,110 +72,23 @@
             </p>
 
             <img
-                src="img/gato.gif"
+                src="{% static 'portal/img/gato.gif'%}"
                 alt="Gato"
                 title="Tudo joia, meu patrão"
                 class="imagem"
             >
+            
 
-        </section>
-
-        <!-- currículo: Fellipe Dutra -->
-        <section id="curriculo_luiz" class="pagina curriculo-luiz"
-            style="display: none;">
-
-            <img
-                src="img - Copia/curriculo.jpg"
-                alt="Foto de Fellipe"
-                title="Foto de perfil"
-                class="perfil"
-            >
-
-            <h1 class="title">Luiz Fellipe Teixeira Dutra</h1>
-
-            <h2 class="title">PERFIL PROFISSIONAL</h2>
-
-            <p>
-                Técnico integrado ao ensino médio em Informática.
-            </p>
-
-            <h2 class="title">NÍVEL DE FORMAÇÃO</h2>
-
-            <p>Médio/Técnico</p>
-
-            <h2 class="title">HABILIDADES</h2>
-
-            <ul style="display: inline-block; text-align: left;">
-                <li>Trabalho em equipe</li>
-                <li>Interpretação de projetos</li>
-                <li>Cálculos</li>
-            </ul>
-
-            <h2 class="title">INTERESSES</h2>
-
-            <ul style="display: inline-block; text-align: left;">
-                <li>Tecnologia</li>
-                <li>Ciências exatas</li>
-            </ul>
-
-            <h2 class="title">IDIOMAS</h2>
-
-            <ul style="display: inline-block; text-align: left;">
-                <li>Português nativo</li>
-                <li>Inglês intermediário</li>
-            </ul>
-
-        </section>
-
-        <!-- tema livre: Pizza -->
-        <section id="tema_livre_luiz" class="pagina pizza-luiz"
-            style="display: none;">
-
-            <h1 class="titulo">HISTÓRIA DA PIZZA</h1>
-
-            <img
-                class="fotos"
-                src="img - Copia/pizza.png"
-                alt="Foto de uma pizza"
-                title="Pizza"
-            >
-
-            <p class="parag2">
-                A história da pizza começou aproximadamente no século VI a.C.,
-                quando povos do Mediterrâneo inventaram a receita de uma
-                espécie de pão árabe com massa plana em formato de disco.
-                O alimento tinha como ingredientes água e farinha de trigo.
-            </p>
-
-            <h2 class="titulo">MEU SABOR FAVORITO</h2>
-
-            <p class="parag2">
-                O melhor sabor de pizza, na minha opinião, é
-                <strong>calabresa!</strong>
-            </p>
-
-            <p>
-                <a
-                    href="https://brasilescola.uol.com.br/curiosidades/historia-da-pizza.htm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    CLIQUE AQUI PARA SABER MAIS SOBRE A HISTÓRIA DA PIZZA
-                </a>
-            </p>
-
-        </section>
-
-    </main>
+    </div>
 
     <!-- Rodapé -->
-    <footer id="rodape" class="tabela">
+    <div class="rodape">
 
         <p>
             © 2026 - Todos os direitos reservados
         </p>
 
-    </footer>
+    </div>
 
 </body>
 </html>

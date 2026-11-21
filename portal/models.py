@@ -11,6 +11,7 @@ class Conteudo(models.Model):
 
 class Menu(models.Model):
     TIPO_DESTINO = [
+        ('home', 'Pagina Inicial'),
         ('interno', 'Conteudo interno'),
         ('externo', 'Link Externo'),
     ]

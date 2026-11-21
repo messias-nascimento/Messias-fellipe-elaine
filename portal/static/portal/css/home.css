@@ -1,0 +1,96 @@
+    /*José Messias_Maria Elaine_ATV06_523*/
+    
+    *{
+        box-sizing: border-box;/*reconhece a largura total dos blocos incluindo o espaçamento e a borda*/
+    }
+
+    .linha-principal {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    }
+    #corpo{
+        display:flex; /* organiza os elementos com Flexbox */
+        flex-wrap:wrap; /* permite quebrar linha */
+        width:95%;/*define a largura da pagina para não ocupar 100% da lagura total*/
+        margin:auto;/*usei pra centralizar o conteudo*/
+    }   
+    .rodape{
+        font-style: italic;/*muda a fonte do paragrafo*/
+        background-color: rgb(165, 165, 165);/*adiciona cor no fundo*/
+        width: 100%;/*ajusta tamanho do bloco horizontalmente*/
+        text-align: center;/*alinha o texto no centro*/
+    }
+    .title2 {
+        font-size: 25px; /*aumenta a fonte*/
+        font-weight: bold;/*deixa o texto negrito*/
+        text-align: center;/*alinha o texto no centro*/
+    }
+    .link {
+        color:cadetblue;/*coloca cor nos links*/
+        font-weight: bold;/*deixq a fonte negrito*/
+        font-size: 20PX;/*define a fonte dos links para 20 pixels*/
+    }
+    .menu{
+        width:15%;/*define a largura do menu*/
+        border:1px solid black;/*coloca cor na borda*/
+        padding:10px;/*deixa um espaço entre o conteudo e a borda*/
+        background-color:rgb(80,92,109);/*coloca cor no fundo*/
+        color:white;/*define a cor do texto*/
+        flex-shrink: 0;
+    }
+   .cabecalho{
+        width:100%;/*define a largura do cabeçalho*/
+        background-color:rgb(165,165,165);/*coloca cor no fundo*/
+    }
+    
+    .conteudo{
+        width: 85%;/*ajusta tamanho do bloco horizontalmente*/
+        min-width: 0;
+        
+    }
+    
+    #home{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/*define p estilo da fonte*/
+        font-size: 28px;/*define o tamanho da fonte*/
+        text-align: center;/*alinha o texto no centro*/
+        background-color: antiquewhite;/*coloca cor no fundo*/
+    }
+
+    .imagem{
+        max-width: 100%;/*define o tamanho máximo da imagem*/
+        height: auto;/*faz com que a altura seja adequada a largura*/
+    }
+
+    @media (max-width:768px){ /*todas as regras a seguir são aplicadas quando o tamanho da tela for menor do quee 768pixels*/
+
+    #corpo{
+        flex-direction:column;/*define a orientação dos items na página para alinhá-los em coluna*/
+    }
+    .linha-principal {
+    flex-direction: column;
+    }
+
+    .cabecalho,.menu,.conteudo,.rodape{
+        width:100%;/*define  largura dos itens como rodape menu e conteudo e cabeçalho pra ocupar toda a tela*/
+    }
+
+     .menu{
+        width:100%;/*define a largura do menu pra toda a tela*/
+        display:flex;/* coloca os links lado a lado */
+        justify-content:space-around; /* distribui os links */
+        align-items:center;/*alinha os links no centro*/
+        flex-wrap:wrap;/* quebra a linha se faltar espaço */
+        padding:10px;/*deixa espaço entre o texto e a borda*/
+        margin-bottom:10px;/*cria um espaço de 10 pixels baixo do elemento.*/
+    }
+     .title2{
+        font-size:90%;/*mudaa o tamanho da fonte*/
+    }
+
+    .link{
+        display:block;/*faz com que o item se comporte como bloco para facilitar o alinhamento*/
+        margin:8px 0;/*forma abreviada de definir as margens*/
+        font-size: 90%;/*muda tamanho da fonte*/
+    }
+}

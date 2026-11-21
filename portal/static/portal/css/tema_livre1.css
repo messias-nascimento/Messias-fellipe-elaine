@@ -1,0 +1,65 @@
+    /*José Messias_Maria Elaine_Luiz_Fellipe_Teixeira_ATV0_523*/
+    
+    #tema_livre_elaine, #tema_livre_messias, #tema_livre_felipe{
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('static/portal/img/ceu_mine.jpeg');/*deixa uma cor meio transparente no body sobre a imagem*/
+        background-repeat: no-repeat;/*para não repetir a foto*/
+        background-size: cover;/*deixa a foto de fundo do tamanho total da tela*/
+        padding-left:10%;/*cria espaço a esquerda*/
+        padding-right:10%;/*cria espaço a direita*/
+        text-align: justify;/*deixa o texto justificado*/
+    }
+    .parag2 {
+        font-style: italic;/*deixa a fonte em itálico*/
+        font-size: larger;/*aumenta o tamanho da fonte*/
+        color: white;/*deixa o texto branco*/
+        font-weight: bold;/*deixa o texto negrito*/
+        background-color: #715dbd;/*coloca cor de fundo no texto*/
+        padding: 15px;/*deixa espaço entre o texto e a borda*/
+    }
+    .titulo {
+        font-size: 25px;/*define tamanho da fonte*/ 
+        font-weight: bold;/*deixa a fonte em negrito*/
+        color:white;/*deixa o texto com a cor branca*/
+        text-align: center;/*alinha o texto no centro*/
+        background-color: #353d2f;/*coloca cor de fundo no texto*/
+        padding: 20px;/*deixa espaço entre o texto e a borda*/
+    }
+    .fotos{
+        display: block; margin: auto;/*tranforma a imagem em bloco para alinhar ao centro*/
+        height:auto;/*faz a altura acompanhar a largura*/
+        width:30%;/*define a largura da imagem*/
+    }
+    #link{
+        color: rgb(122, 122, 178);/*deixa o texto com a cor definida*/
+    }
+
+    @media (max-width:768px){/*todas as regras a seguir são aplicadas quando o tamanho da tela for menor do quee 768pixels*/
+
+        #tema_livre_elaine,
+        #tema_livre_messias,
+        #tema_livre_felipe{
+            padding-left:5%;   /* diminui as margens laterais */
+            padding-right:5%;
+        }
+
+        .titulo{
+            font-size:20px;/*deixa o título menor */
+            padding:10px;/*cria espaço entre texto e borda*/
+        }
+
+        .parag2{
+            font-size:16px;/*deixa o texto menor*/
+            padding:10px;/*cria espaço entre texto e borda*/
+        }
+
+        .fotos{
+            width:80%;/*aumenta a imagem pra quando o tamanho da tela for reduzido elas fiquem visiveis*/
+            max-width:100%;/*deixa elas no tamanho máximo respeitando o tamanho original*/
+            height:auto;/*faz com que a altura acompanhe a largura*/
+        }
+
+        #link{
+            font-size:16px;/*ajusta tamanho da fonte do  link*/
+            word-break:break-word; /*evita estourar a tela */
+        }
+    }
