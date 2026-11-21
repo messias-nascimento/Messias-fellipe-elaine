@@ -12,9 +12,11 @@
     <link rel="icon" type="image/x-icon" href="{% static 'portal/img/baixados.jpeg'%}">
 
     <link rel="stylesheet" href="{% static 'portal/css/home.css'%}">
+    <link rel="stylesheet" href="{% static 'portal/css/curriculo.css'%}">
+    <link rel="stylesheet" href="{% static 'portal/css/tema_livre1.css'%}">
 </head>
 
-<body id="corpo">
+<body class="corpo">
 
     <noscript>
         Olá! Parece que o JavaScript está desativado no seu navegador.
@@ -27,7 +29,7 @@
     </header>
 
     <!-- Menu de navegação -->
-    <div class="menu">
+    <nav>
     <h1 class="title2">MENU:</h1>
 
     {% for menu in menus %}
@@ -55,10 +57,10 @@
 
     {% endfor %}
 
-</div>
+</nav>
 
     <!-- Conteúdo principal -->
-    <div class="tabela">
+    <div class="conteudo">
 
         <!-- Página inicial -->
         <div id="home" class="conteudo">
@@ -77,18 +79,18 @@
                 title="Tudo joia, meu patrão"
                 class="imagem"
             >
-            
+         </div>   
 
     </div>
 
     <!-- Rodapé -->
-    <div class="rodape">
+    <footer>
 
         <p>
             © 2026 - Todos os direitos reservados
         </p>
 
-    </div>
+    </footer>
 
 </body>
 </html>
