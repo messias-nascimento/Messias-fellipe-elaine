@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ conteudo.titulo }}</title>
+
+    <link rel="stylesheet" href="{% static 'portal/css/home.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h1>PÁGINA AMIGÁVEL</h1>
+</header>
+
+<nav>
+
+    <h2>MENU:</h2>
+
+    {% for menu in menus %}
+
+        {% if menu.tipo_destino == 'interno' %}
+
+            <a href="{% url 'pagina_conteudo' menu.conteudo.slug %}">
+                {{ menu.titulo }}
+            </a>
+
+        {% else %}
+
+            <a href="{{ menu.url_externa }}" target="_blank">
+                {{ menu.titulo }}
+            </a>
+
+        {% endif %}
+
+        <br>
+
+    {% endfor %}
+
+</nav>
+
+<main>
+
+    {{ conteudo.conteudo_html|safe }}
+
+</main>
+
+<footer>
+
+    <p>© 2026 - Todos os direitos reservados</p>
+
+</footer>
+
+</body>
+
+</html>
